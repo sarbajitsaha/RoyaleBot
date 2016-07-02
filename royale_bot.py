@@ -49,15 +49,17 @@ class RoyaleBot:
         words = body.split()
         for i in range(len(words)):
             words[i] = words[i].lower().strip()
-        if ("royalebot!" in words) or ("rbot!" in words):
+        if ("royalebot!" in words) or ("rbot!" in words) or ("!royalebot" in words) or ("!rbot" in words):
             if id not in self.ids_commented:
                 self.cmts.append(body)
             if(len(words)==1):
                 self.cmt = "To call the bot comment as royalebot! {troop name} or rbot! {troop name}"
             elif(len(words)==2):
                 name = words[1]
-            else:
+            elif(len(words)==3):
                 name = words[1] + words[2]
+            else:
+                return False
             print (name)
             try:
                 f = open("data/"+name)

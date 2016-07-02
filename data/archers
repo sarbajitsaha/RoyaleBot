@@ -1,0 +1,39 @@
+Name: Archers
+
+Rarity: Common
+
+Cost: 3
+
+Range: 5
+
+DeployTime: 1
+
+HitSpeed: 1.2 sec
+
+Levels Hitpoints Damage DPS
+
+Lvl1: 125 40 33
+
+Lvl2: 137 44 36
+
+Lvl3: 151 48 40
+
+Lvl4: 166 53 44
+
+Lvl5: 182 58 48
+
+Lvl6: 200 64 53
+
+Lvl7: 220 70 56
+
+Lvl8: 241 77 64
+
+Lvl9: 265 84 70
+
+Lvl10: 291 93 77
+
+Lvl11: 320 102 85
+
+Lvl12: 351 112 93
+
+Lvl13: 386 123 102
