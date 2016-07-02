@@ -60,13 +60,20 @@ class RoyaleBot:
                 name = words[1] + words[2]
             else:
                 return False
-            print (name)
+            try:
+                print (name)
+            except NameError:
+                print ("name not defined!")
+                return False
             try:
                 f = open("data/"+name)
                 self.cmt = f.read()
                 f.close()
             except IOError:
                 self.cmt = "Sorry couldn't find this troop. \n\nTo call the bot comment as royalebot! {troop name} or rbot! {troop name}"
+            except:
+                print ("some other error")
+                return False
             return True
         else:
             return False
