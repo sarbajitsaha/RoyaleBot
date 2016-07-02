@@ -1,0 +1,39 @@
+Name: Minions
+
+Rarity: Common
+
+Cost: 3
+
+Range: 2
+
+DeployTime: 1
+
+HitSpeed: 1 sec
+
+Levels Hitpoints Damage DPS
+
+Lvl1: 90 40 40
+
+Lvl2: 99 44 44
+
+Lvl3: 108 48 48
+
+Lvl4: 119 53 53
+
+Lvl5: 131 58 58
+
+Lvl6: 144 64 64
+
+Lvl7: 158 70 70
+
+Lvl8: 173 77 77
+
+Lvl9: 190 84 84
+
+Lvl10: 209 93 93
+
+Lvl11: 230 102 102
+
+Lvl12: 252 112 112
+
+Lvl13: 278 123 123

@@ -48,26 +48,28 @@ class RoyaleBot:
     def check_condition(self,body,id):
         words = body.split()
         for i in range(len(words)):
-            words[i] = words[i].lower()
+            words[i] = words[i].lower().strip()
         if ("royalebot!" in words) or ("rbot!" in words):
             if id not in self.ids_commented:
                 self.cmts.append(body)
-            if(len(words)!=2):
-                return False
-            name = words[1]
+            if(len(words)==1):
+                self.cmt = "To call the bot comment as royalebot! {troop name} or rbot! {troop name}"
+            elif(len(words)==2):
+                name = words[1]
+            else:
+                name = words[1] + words[2]
             print (name)
             try:
                 f = open("data/"+name)
                 self.cmt = f.read()
                 f.close()
             except IOError:
-                self.cmt = "Sorry couldn't find this troop. Remember not to put spaces in between and only use two words e.g. write Royale Giant as RoyaleGiant\n\nTo call the bot comment as royalebot! royalegiant"
+                self.cmt = "Sorry couldn't find this troop. \n\nTo call the bot comment as royalebot! {troop name} or rbot! {troop name}"
             return True
         else:
             return False
 
     def add_comment(self, c, id, cmt, body):
-        print (self.ids_commented)
         try:
             if id not in self.ids_commented:
                 print ("Id is : " + id)
@@ -99,12 +101,12 @@ class RoyaleBot:
         for id in self.ids_commented:
             str+=(id+"\n")
         response = self.client.put_file('ids.txt', str, overwrite=True)
-        print ('uploaded ids: ', response)
+        print ('Uploaded ids: ', response)
         str = ""
         for cmt in self.cmts:
             str += (cmt + "\n")
         response = self.client.put_file('cmts.txt', str, overwrite=True)
-        print('uploaded cmts: ', response)
+        print('Uploaded cmts: ', response)
 
 
 if __name__=="__main__":
@@ -121,9 +123,9 @@ if __name__=="__main__":
         if (heroku==False):
             os.system("cls")
         rbot.send_royale_stats()
-        print ("waiting for a minute before checking")
+        print ("Waiting for a minute before checking")
         i+=1
-        if(i%5==0):
+        if(i%2==0):
             rbot.add_ids_cmts_dropbox()
             rbot.get_ids_cmts_dropbox()
         time.sleep(60)
