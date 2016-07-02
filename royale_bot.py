@@ -10,7 +10,7 @@ class RoyaleBot:
     def __init__(self,heroku=False):
         self.heroku = heroku
         self.r = praw.Reddit(user_agent='Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')
-        self.subreddit_name1 = "clashroyale"
+        self.subreddit_name1 = "test"
         self.subreddit_name2 = "royalebot"
         self.ids_commented = []
         self.cmts = []
