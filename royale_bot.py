@@ -10,7 +10,8 @@ class RoyaleBot:
     def __init__(self,heroku=False):
         self.heroku = heroku
         self.r = praw.Reddit(user_agent='Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')
-        self.subreddit_name = "clashroyale"
+        self.subreddit_name1 = "clashroyale"
+        self.subreddit_name2 = "royalebot"
         self.ids_commented = []
         self.cmts = []
         if(heroku):
@@ -35,7 +36,7 @@ class RoyaleBot:
             f.close()
 
     def send_royale_stats(self):
-        subreddit = self.r.get_subreddit(self.subreddit_name)
+        subreddit = self.r.get_subreddit(self.subreddit_name1 + '+' + self.subreddit_name2)
         cmts = subreddit.get_comments()
         cmts = praw.helpers.flatten_tree(cmts)
         for c in cmts:
@@ -117,6 +118,8 @@ if __name__=="__main__":
     rbot.get_ids_cmts_dropbox()
     i = 0
     while True:
+        if (heroku==False):
+            os.system("cls")
         rbot.send_royale_stats()
         print ("waiting for a minute before checking")
         i+=1
