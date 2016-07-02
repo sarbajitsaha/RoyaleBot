@@ -1,0 +1,35 @@
+Name: Arena Tower
+
+Range: 7.5
+
+Target: Air & Ground
+
+HitSpeed: 0.8 sec
+
+Levels Hitpoints Damage DPS
+
+Lvl1: 1400 50 62.5
+
+Lvl2: 1512 54 67.5
+
+Lvl3: 1624 58 72.5
+
+Lvl4: 1750 62 77.5
+
+Lvl5: 1890 67 83.75
+
+Lvl6: 2030 72 90
+
+Lvl7: 2184 78 97.5
+
+Lvl8: 2352 84 105
+
+Lvl9: 2534 90 112.5
+
+Lvl10: 2786 99 123.75
+
+Lvl11: 3052 109 136.25
+
+Lvl12: 3346 119 148.75
+
+Lvl13: 3668 131 163.75
