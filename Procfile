@@ -1,1 +1,1 @@
-python royale_bot_heroku.py
+worker: python royale_bot_heroku.py
