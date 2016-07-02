@@ -4,26 +4,19 @@ Rarity: Epic
 
 Cost: 6
 
-Radius: 3.5 
+Radius: 3.5
 
 DeployTime: 1.5 sec
 
 Count: 3
 
-Levels Damage Crown Tower Damage 
-
-Lvl1: 650 260
-
-Lvl2: 715 286
-
-Lvl3: 786 315
-
-Lvl4: 864 346
-
-Lvl5: 949 380
-
-Lvl6: 1040 416
-
-Lvl7: 1144 458
-
-Lvl8: 1254 502
+Levels|Damage|CrownTowerDamage
+---------|---------|---------
+1|650|260
+2|715|286
+3|786|315
+4|864|346
+5|949|380
+6|1040|416
+7|1144|458
+8|1254|502

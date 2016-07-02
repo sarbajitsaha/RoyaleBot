@@ -1,10 +1,15 @@
-f = open("arrows","a")
-val1 = 115
-val2 = 46
-for i in range(1,14):
-	f.write("\n\nLvl{0}: {1} {2}".format(i,val1,val2))
-	val1 = val1 + (0.1)*val1
-	val1 = (int)(val1)
-	val2 = val2 + (0.1)*val2
-        val2 = (int)(val2)
+import os
+
+files = os.listdir("../data")
+i = 0
+for a in files:
+	i+=1
+	f = a.strip()
+	data = open(f,"r+")
+	d = data.read()
+	d = d.replace("","").replace("","")
+	data.seek(0)
+	data.write(d)
+	data.close()
+print (i)
  

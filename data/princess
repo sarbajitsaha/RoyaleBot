@@ -10,14 +10,10 @@ DeployTime: 1
 
 HitSpeed: 3 sec
 
-Levels Hitpoints Area Damage DPS
-
-Lvl1: 216 140 46
-
-Lvl2: 237 154 51
-
-Lvl3: 261 169 56
-
-Lvl4: 287 186 62
-
-Lvl5: 315 204 68
+Levels|Hitpoints|AreaDamage|DPS
+---------|---------|---------|---------
+1|216|140|46
+2|237|154|51
+3|261|169|56
+4|287|186|62
+5|315|204|68

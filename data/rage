@@ -6,22 +6,15 @@ Cost: 3
 
 Radius: 5
 
-Boost: 40% 
+Boost: 40%
 
-Levels Duration 
-
-Lvl1: 8 sec
-
-Lvl2: 8.5 sec
-
-Lvl3: 9 sec
-
-Lvl4: 9.5 sec
-
-Lvl5: 10 sec
-
-Lvl6: 10.5 sec
-
-Lvl7: 11 sec
-
-Lvl8: 11.5 sec
+Levels|Duration
+---------|---------
+1|8 sec
+2|8.5 sec
+3|9 sec
+4|9.5 sec
+5|10 sec
+6|10.5 sec
+7|11 sec
+8|11.5 sec

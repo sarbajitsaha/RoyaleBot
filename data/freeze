@@ -1,25 +1,18 @@
-Name: Freeze 
+Name: Freeze
 
 Rarity: Epic
 
 Cost: 4
 
-Radius: 3 
+Radius: 3
 
-Levels Duration 
-
-Lvl1: 4 sec
-
-Lvl2: 4.3 sec
-
-Lvl3: 4.6 sec
-
-Lvl4: 4.9 sec
-
-Lvl5: 5.2 sec
-
-Lvl6: 5.5 sec
-
-Lvl7: 5.8 sec
-
-Lvl8: 6.1 sec
+Levels|Duration
+---------|---------
+1|4 sec
+2|4.3 sec
+3|4.6 sec
+4|4.9 sec
+5|5.2 sec
+6|5.5 sec
+7|5.8 sec
+8|6.1 sec

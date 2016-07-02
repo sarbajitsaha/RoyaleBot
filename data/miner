@@ -10,14 +10,10 @@ DeployTime: 1
 
 HitSpeed: 1.2 sec
 
-Levels Hitpoints Damage DPS CrownTowerDamage
-
-Lvl1: 1060 160 133 64
-
-Lvl2: 1166 176 146 71
-
-Lvl3: 1282 193 160 78
-
-Lvl4: 1409 212 176 85
-
-Lvl5: 1547 233 194
+Levels|Hitpoints|Damage|DPS|CrownTowerDamage
+---------|---------|---------|---------|---------
+1|1060|160|133|64
+2|1166|176|146|71
+3|1282|193|160|78
+4|1409|212|176|85
+5|1547|233|194|94
