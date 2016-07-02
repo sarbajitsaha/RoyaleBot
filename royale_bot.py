@@ -10,7 +10,7 @@ class RoyaleBot:
     def __init__(self,heroku=False):
         self.heroku = heroku
         self.r = praw.Reddit(user_agent='Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')
-        self.subreddit_name = "test"
+        self.subreddit_name = "clashroyale"
         self.ids_commented = []
         self.cmts = []
         if(heroku):
@@ -60,7 +60,7 @@ class RoyaleBot:
                 self.cmt = f.read()
                 f.close()
             except IOError:
-                self.cmt = "Sorry couldn't find this troop. Remember not to put spaces in between and only use two words e.g. write Royale Giant as RoyaleGiant\n\nTo call the bot comment as rbot! royalegiant"
+                self.cmt = "Sorry couldn't find this troop. Remember not to put spaces in between and only use two words e.g. write Royale Giant as RoyaleGiant\n\nTo call the bot comment as royalebot! royalegiant"
             return True
         else:
             return False
