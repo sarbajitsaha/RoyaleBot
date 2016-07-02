@@ -1,28 +1,38 @@
-import praw
-import time
 import os
 
+import praw
+import time
 import unicodedata
 
+import dropbox.dropbox
 
 class RoyaleBot:
-    def __init__(self):
+    def __init__(self,heroku=False):
+        self.heroku = heroku
         self.r = praw.Reddit(user_agent='Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')
         self.subreddit_name = "test"
         self.ids_commented = []
+        self.cmts = []
+        if(heroku):
+            self.access_token = os.environ['DROPBOX_ACCESS_TOKEN']
+        else:
+            f = open("credentials")
+            data = f.read().split("\n")
+            f.close()
+            self.access_token = data[2]
+        self.client = dropbox.client.DropboxClient(self.access_token)
         self.ending = "\n\nI am a bot. Question/problem? Ask my master: /u/iknowyourwoman\n\n[Source](https://github.com/sarbajitsaha/RoyaleBot)"
-        with open("ids","r+") as f:
-            data = f.read()
-            data = data.split("\n")
-            for d in data:
-                self.ids_commented.append(d.strip())
 
     def load_credentials(self):
-        f = open("credentials")
-        cred = []
-        for line in f:
-            cred.append(line.strip())
-        self.r.login(cred[0], cred[1], disable_warning=True) #logged in
+        if self.heroku:
+            self.r.login(os.environ['REDDIT_USERNAME'], os.environ['REDDIT_PASSWORD'], disable_warning=True)  # logged in
+        else:
+            f = open("credentials")
+            cred = []
+            for line in f:
+                cred.append(line.strip())
+            self.r.login(cred[0], cred[1], disable_warning=True) #logged in
+            f.close()
 
     def send_royale_stats(self):
         subreddit = self.r.get_subreddit(self.subreddit_name)
@@ -30,19 +40,17 @@ class RoyaleBot:
         cmts = praw.helpers.flatten_tree(cmts)
         for c in cmts:
             id = c.id
-            id = unicodedata.normalize('NFKD', id).encode('ascii', 'ignore')
             body = c.body
-            if(self.check_condition(c,body)):
+            if(self.check_condition(body,id)):
                 self.add_comment(c, id, self.cmt, body)
 
-    def check_condition(self,c,body):
+    def check_condition(self,body,id):
         words = body.split()
         for i in range(len(words)):
             words[i] = words[i].lower()
         if "royalebot!" in words:
-            with open("cmts", "a") as f:
-                f.write(body + "\n")
-            #files = os.listdir("data")
+            if id not in self.ids_commented:
+                self.cmts.append(body)
             if(len(words)!=2):
                 return False
             name = words[1]
@@ -50,6 +58,7 @@ class RoyaleBot:
             try:
                 f = open("data/"+name)
                 self.cmt = f.read()
+                f.close()
             except IOError:
                 self.cmt = "Sorry couldn't find this troop. Remember not to put spaces in between and only use two words e.g. write Royale Giant as RoyaleGiant\n\nTo call the bot comment as rbot! royalegiant"
             return True
@@ -63,7 +72,6 @@ class RoyaleBot:
                 print ("Id is : " + id)
                 print ("Making comment to -> {0}".format(body))
                 c.reply(cmt+self.ending)
-                self.add_ids_to_file(id)
                 self.ids_commented.append(id)
             else:
                 print ("Id present {0}".format(id))
@@ -71,17 +79,46 @@ class RoyaleBot:
             print("Ratelimit: {0} seconds".format(error.sleep_time))
             time.sleep(error.sleep_time)
 
-    def add_ids_to_file(self,id):
-        with open("ids","a") as f:
-            f.write(id.strip()+"\n")
+    def get_ids_cmts_dropbox(self):
+        self.ids_commented = []
+        self.cmts = []
+        f, metadata = self.client.get_file_and_metadata('ids.txt')
+        data = f.read().decode('UTF-8').split("\n")
+        for d in data:
+            self.ids_commented.append(d.strip())
+        print ("Added ids -> {0}".format(len(self.ids_commented)))
+        f, metadata = self.client.get_file_and_metadata('cmts.txt')
+        data = f.read().decode('UTF-8').split("\n")
+        for d in data:
+            self.cmts.append(d.strip())
+        print ("Added cmts -> {0}".format(len(self.cmts)))
+
+    def add_ids_cmts_dropbox(self):
+        str = ""
+        for id in self.ids_commented:
+            str+=(id+"\n")
+        response = self.client.put_file('ids.txt', str, overwrite=True)
+        print ('uploaded ids: ', response)
+        str = ""
+        for cmt in self.cmts:
+            str += (cmt + "\n")
+        response = self.client.put_file('cmts.txt', str, overwrite=True)
+        print('uploaded cmts: ', response)
 
 
 if __name__=="__main__":
     rbot = RoyaleBot()
     rbot.load_credentials()
+    rbot.get_ids_cmts_dropbox()
+    i = 0
     while True:
-        os.system('clear') #make this os.system("cls") to run in windows
         rbot.send_royale_stats()
         print ("waiting for a minute before checking")
+        i+=1
+        if(i%5==0):
+            rbot.add_ids_cmts_dropbox()
+            rbot.get_ids_cmts_dropbox()
         time.sleep(60)
+
+
 
