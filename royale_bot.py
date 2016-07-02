@@ -107,7 +107,12 @@ class RoyaleBot:
 
 
 if __name__=="__main__":
-    rbot = RoyaleBot()
+    try:
+        heroku = os.environ['HEROKU']
+    except:
+        print("Not heroku")
+        heroku = False
+    rbot = RoyaleBot(heroku=heroku)
     rbot.load_credentials()
     rbot.get_ids_cmts_dropbox()
     i = 0
