@@ -1,0 +1,41 @@
+Name: Cannon
+
+Rarity: Common
+
+Cost: 3
+
+Radius: 5.5
+
+Hit Speed: 0.8 sec
+
+Deploy Time: 1 sec
+
+Lifetime: 30 sec
+
+Levels Hitpoints AreaDamage DPS
+
+Lvl1: 350 60 75
+
+Lvl2: 385 66 82
+
+Lvl3: 423 72 90
+
+Lvl4: 465 79 98
+
+Lvl5: 511 85 106
+
+Lvl6: 560 96 120
+
+Lvl7: 616 105 131
+
+Lvl8: 675 115 143
+
+Lvl9: 742 127 158
+
+Lvl10: 815 139 173
+
+Lvl11: 896 153 191
+
+Lvl12: 983 168 210
+
+Lvl13: 1081 185 231

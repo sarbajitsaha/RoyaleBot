@@ -1,0 +1,41 @@
+Name: Mortar
+
+Rarity: Common
+
+Cost: 4
+
+Radius: 4.5-11
+
+Hit Speed: 5 sec
+
+Deploy Time: 4 sec
+
+Lifetime: 30 sec
+
+Levels Hitpoints AreaDamage DPS
+
+Lvl1: 600 108 21
+
+Lvl2: 660 119 23
+
+Lvl3: 726 131 26
+
+Lvl4: 798 145 29
+
+Lvl5: 876 158 31
+
+Lvl6: 960 173 34
+
+Lvl7: 1056 190 38
+
+Lvl8: 1158 208 41
+
+Lvl9: 1272 229 45
+
+Lvl10: 1398 251 50
+
+Lvl11: 1536 276 55
+
+Lvl12: 1686 303 60
+
+Lvl13: 1854 333 66

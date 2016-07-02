@@ -18,11 +18,7 @@ class RoyaleBot:
                 self.ids_commented.append(d.strip())
 
     def load_credentials(self):
-        f = open("credentials")
-        cred = []
-        for line in f:
-            cred.append(line.strip())
-        self.r.login(cred[0], cred[1], disable_warning=True) #logged in
+        self.r.login(os.environ['REDDIT_USERNAME'], os.environ['REDDIT_PASSWORD'], disable_warning=True) #logged in
 
     def send_royale_stats(self):
         subreddit = self.r.get_subreddit(self.subreddit_name)
@@ -80,7 +76,6 @@ if __name__=="__main__":
     rbot = RoyaleBot()
     rbot.load_credentials()
     while True:
-        os.system('clear') #make this os.system("cls") to run in windows
         rbot.send_royale_stats()
         print ("waiting for a minute before checking")
         time.sleep(60)
