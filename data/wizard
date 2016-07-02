@@ -1,0 +1,35 @@
+Name: Wizard
+
+Rarity: Rare
+
+Cost: 5
+
+Range: 5
+
+DeployTime: 1
+
+HitSpeed: 1.7 sec
+
+Levels Hitpoints AreaDamage DPS
+
+Lvl1: 340 130 77
+
+Lvl2: 374 143 84
+
+Lvl3: 411 157 92
+
+Lvl4: 452 172 101
+
+Lvl5: 496 189 111
+
+Lvl6: 544 208 122
+
+Lvl7: 598 228 134
+
+Lvl8: 656 250 147
+
+Lvl9: 720 275 161
+
+Lvl10: 792 302 177
+
+Lvl11: 870 332 195

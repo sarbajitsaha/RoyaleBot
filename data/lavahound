@@ -1,0 +1,40 @@
+Name: Lava Hound
+
+Rarity: Legendary
+
+Cost: 7
+
+Range: 2
+
+DeployTime: 1
+
+HitSpeed: 1.3 sec
+
+Levels Hitpoints Area Damage DPS
+
+Lvl1: 3000 45 31
+
+Lvl2: 3300 49 37
+
+Lvl3: 3630 54 41
+
+Lvl4: 3990 59 45
+
+Lvl5: 4380 65 50
+
+
+
+
+Lava Pups
+
+Levels Hitpoints Area Damage DPS
+
+Lvl1: 180 45 45
+
+Lvl2: 198 49 49
+
+Lvl3: 217 54 54
+
+Lvl4: 239 59 59
+
+Lvl5: 262 65 65

@@ -1,0 +1,51 @@
+Name: Golem
+
+Rarity: Epic
+
+Cost: 8
+
+Range: Melee
+
+DeployTime: 3
+
+HitSpeed: 2.5 sec
+
+Levels Hitpoints Damage DPS DeathDamage
+
+Lvl1: 3150 186 74 186
+
+Lvl2: 3465 204 81 204
+
+Lvl3: 3811 225 90 225
+
+Lvl4: 4189 246 98 246
+
+Lvl5: 4599 270 108 271
+
+Lvl6: 5040 297 118 297
+
+Lvl7: 5544 327 130 327
+
+Lvl8: 6079 358 143 358
+
+
+
+Golemites
+
+Levels Hitpoints Damage DPS DeathDamage
+
+Lvl1: 630 37 15 37
+
+Lvl2: 693 40 16 40
+
+Lvl3: 762 44 18 44
+
+Lvl4: 837 49 20 49
+
+Lvl5: 919 54 22 54
+
+Lvl6: 1008 59 24 59
+
+Lvl7: 1108 65 26 65
+
+Lvl8: 1215 71 28 71

@@ -49,7 +49,7 @@ class RoyaleBot:
         words = body.split()
         for i in range(len(words)):
             words[i] = words[i].lower()
-        if "royalebot!" in words:
+        if ("royalebot!" in words) or ("rbot!" in words):
             if id not in self.ids_commented:
                 self.cmts.append(body)
             if(len(words)!=2):
