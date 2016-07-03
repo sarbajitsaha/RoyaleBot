@@ -135,7 +135,7 @@ if __name__=="__main__":
         print ("Waiting for a minute before checking")
         i+=1
         if(i%2==0):
-            #rbot.add_ids_cmts_dropbox()
+            rbot.add_ids_cmts_dropbox()
             rbot.get_ids_cmts_dropbox()
         time.sleep(60)
 
