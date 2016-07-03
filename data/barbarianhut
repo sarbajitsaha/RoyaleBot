@@ -1,0 +1,25 @@
+Name: Barbarian Hut
+
+Rarity: Rare
+
+Cost: 7
+
+Spawn Speed: 14 sec
+
+Deploy Time: 1 sec
+
+Lifetime: 1 min(60 sec)
+
+Levels|Hitpoints|BarabarianLevel
+---------|---------|---------
+1|1100|3
+2|1210|4
+3|1331|5
+4|1463|6
+5|1606|7
+6|1760|8
+7|1936|9
+8|2123|10
+9|2332|11
+10|2563|12
+11|2816|13

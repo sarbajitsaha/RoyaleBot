@@ -1,0 +1,16 @@
+Name: Mirror
+
+Rarity: Epic
+
+Cost: Cost of previous card + 1
+
+Levels|MirroredCommonLevel|MirroredRareLevel|MirroredEpicLevel|MirroredLegendaryLevel
+---------|---------|---------|---------|---------
+1|6|4|1|1
+2|7|5|2|1
+3|8|6|3|1
+4|9|7|4|1
+5|10|8|5|2
+6|11|9|6|3
+7|12|10|7|4
+8|13|11|8|5

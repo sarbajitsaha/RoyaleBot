@@ -1,0 +1,24 @@
+Name: Witch
+
+Rarity: Epic
+
+Cost: 5
+
+Range: 5
+
+DeployTime: 1
+
+HitSpeed: 0.7 sec
+
+Spawn Speed: 7.5 sec
+
+Levels|Hitpoints|AreaDamage|DPS|SkeletonLvl
+---------|---------|---------|---------|---------
+1|500|49|70|6
+2|550|53|75|7
+3|605|59|84|8
+4|665|65|92|9
+5|730|71|101|10
+6|800|78|111|11
+7|880|86|122|12
+8|965|94|134|13

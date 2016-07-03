@@ -1,0 +1,25 @@
+Name: Tombstone
+
+Rarity: Rare
+
+Cost: 4
+
+Spawn Speed: 2.9 sec
+
+Deploy Time: 1 sec
+
+Lifetime: 40 sec
+
+Levels|Hitpoints|SkeletonLevel
+---------|---------|---------
+1|220|3
+2|242|4
+3|266|5
+4|292|6
+5|321|7
+6|352|8
+7|387|9
+8|424|10
+9|463|11
+10|512|12
+11|563|13

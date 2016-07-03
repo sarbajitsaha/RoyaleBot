@@ -1,0 +1,29 @@
+Name: Ice Spirits
+
+Rarity: Common
+
+Cost: 1
+
+Range: 2.5
+
+DeployTime: 1
+
+HitSpeed: Very Fast
+
+Freeze Duration: 2 sec
+
+Levels|Hitpoints|AreaDamage
+---------|---------|---------
+1|86|48
+2|95|53
+3|105|58
+4|116|64
+5|128|71
+6|141|78
+7|156|86
+8|172|95
+9|190|105
+10|209|115
+11|230|127
+12|253|140
+13|278|154

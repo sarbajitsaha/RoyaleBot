@@ -1,0 +1,19 @@
+Name: Lumberjack
+
+Rarity: Legendary
+
+Cost: 4
+
+Range: Melee
+
+DeployTime: 1
+
+Rage Effect: +40%
+
+Levels|Hitpoints|Damage|DPS
+---------|---------|---------|---------
+1|900|260|236
+2|990|286|260
+3|1089|314|286
+4|1198|346|314
+5|1314|381|346
