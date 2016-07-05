@@ -110,12 +110,12 @@ class RoyaleBot:
         for id in self.ids_commented:
             str+=(id+"\n")
         response = self.client.put_file('ids.txt', str, overwrite=True)
-        print ('Uploaded ids: ', response)
+        #print ('Uploaded ids: ', response)
         str = ""
         for cmt in self.cmts:
             str += (cmt + "\n")
         response = self.client.put_file('cmts.txt', str, overwrite=True)
-        print('Uploaded cmts: ', response)
+        #print('Uploaded cmts: ', response)
 
 
 if __name__=="__main__":
@@ -134,10 +134,9 @@ if __name__=="__main__":
         rbot.send_royale_stats()
         print ("Waiting for a minute before checking")
         i+=1
-        if(i%2==0):
-            #rbot.add_ids_cmts_dropbox()
+        print ("i->"+str(i))
+        if(i%60==0):
+            rbot.add_ids_cmts_dropbox()
             rbot.get_ids_cmts_dropbox()
+            print ("Uploaded")
         time.sleep(60)
-
-
-
