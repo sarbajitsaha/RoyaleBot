@@ -134,12 +134,8 @@ if __name__=="__main__":
         rbot.send_royale_stats()
         print ("Waiting for a minute before checking")
         i+=1
-<<<<<<< HEAD
         print ("i->"+str(i))
         if(i%60==0):
-=======
-        if(i%2==0):
->>>>>>> 0587b3ebf1a1c49d802138468e2fc015ac00bf9a
             rbot.add_ids_cmts_dropbox()
             rbot.get_ids_cmts_dropbox()
             print ("Uploaded")
