@@ -6,6 +6,8 @@ Cost: 2
 
 Radius: 2.5
 
+Stun Effect: 0.5 sec
+
 Levels|Damage|CrownTowerDamage
 ---------|---------|---------
 1|80|32

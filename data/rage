@@ -2,19 +2,19 @@ Name: Rage
 
 Rarity: Epic
 
-Cost: 3
+Cost: 2
 
 Radius: 5
 
-Boost: 40%
+Boost: 30%
 
 Levels|Duration
 ---------|---------
-1|8 sec
-2|8.5 sec
-3|9 sec
-4|9.5 sec
-5|10 sec
-6|10.5 sec
-7|11 sec
-8|11.5 sec
+1|6 sec
+2|6.5 sec
+3|7 sec
+4|7.5 sec
+5|8 sec
+6|8.5 sec
+7|9 sec
+8|9.5 sec

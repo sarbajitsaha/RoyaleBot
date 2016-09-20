@@ -10,6 +10,8 @@ DeployTime: 1.5 sec
 
 Count: 3
 
+Stun Effect: 0.5 sec
+
 Levels|Damage|CrownTowerDamage
 ---------|---------|---------
 1|650|260
